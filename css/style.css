@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+
+}
+
+#box {
+    height: 250px;
+    text-align: center;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: lightslategray;
+    border-radius: 3%;
+}
+
+.btn {
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+
+}
