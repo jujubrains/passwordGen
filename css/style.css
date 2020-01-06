@@ -8,13 +8,22 @@ h1 {
     text-align: center;
     border-style: dashed;
     border-width: 2px;
-    border-color: lightslategray;
+    border-color: rgb(178, 183, 189);
     border-radius: 3%;
 }
 
 .btn {
     height: 50px;
-    width: 200px;
+    width: 250px;
     border-radius: 25px;
+}
 
+.btn1 {
+    background-color: #bb0c0c;
+    font-size: 16pt;
+}
+
+.btn2 {
+    margin-left: 200px;
+    font-size: 16pt;
 }
