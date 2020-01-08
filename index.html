@@ -39,31 +39,32 @@
         var userChars = [];
         var passwordLength;
         var randomPassword = [];
+        var finalPassword;
 
         var numbers = ["0","1","2","3","4","5","6","7","8","9"];
         var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
         var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
         var specialChar = ["!","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"];
         
-        // var passwordLength = prompt("How long do you want your password to be? (Enter a number between 8 and 128)")
+        var passwordLength = prompt("How long do you want your password to be? (Enter a number between 8 and 128)")
 
-        // if (confirm("Do you want the password to contain numbers?")===true) {
-        //     userChars.push(numbers);
-        // } 
+        if (confirm("Do you want the password to contain numbers?")===true) {
+            userChars.push(numbers);
+        } 
         
-        // if (confirm("Do you want the password to lower case letters?")===true) {
-        //     userChars.push(lowerCase);
-        // }
+        if (confirm("Do you want the password to lower case letters?")===true) {
+            userChars.push(lowerCase);
+        }
 
-        // if (confirm("Do you want the password to upper case letters?")===true) {
-        //     userChars.push(upperCase);
-        // }
+        if (confirm("Do you want the password to upper case letters?")===true) {
+            userChars.push(upperCase);
+        }
 
-        // if (confirm("Do you want the password to special characters?")===true) {
-        //     userChars.push(specialChar);
-        // }
+        if (confirm("Do you want the password to special characters?")===true) {
+            userChars.push(specialChar);
+        }
 
-        // var allChars= userChars.flat();
+        var allChars= userChars.flat();
 
         let randomIndexNum = Math.floor(Math.random() * allChars.length);
             let randomChar = allChars[randomIndexNum];
@@ -73,12 +74,14 @@
                 let randomChar = allChars[randomIndexNum];
                 randomPassword[i] = randomChar;
                  }
+            finalPassword=randomPassword.join("");
 
         
-
-        
-        
-        
+        var displayPassword = document.createElement("p");
+        displayPassword.textContent = finalPassword;
+        displayPassword.setAttribute("style", "text-align:center;");
+        var passwordBox = document.querySelector("#box");
+        passwordBox.appendChild(displayPassword);
     
     </script>
 </body>
