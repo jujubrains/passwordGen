@@ -39,7 +39,7 @@
     <script>
         // You put javascript in the script tag
 
-        var password = [];
+        var userChars = [];
         var passwordLength;
 
         var numbers = ["0","1","2","3","4","5","6","7","8","9"];
@@ -47,14 +47,34 @@
         var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
         var specialChar = ["!","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"];
         
-        password.push(numbers,lowerCase,upperCase,specialChar);
-        var allChars= password.flat();
+        var passwordLength = prompt("How long do you want your password to be? (Enter a number between 8 and 128)")
+
+        if (confirm("Do you want the password to contain numbers?")===true) {
+            userChars.push(numbers);
+        } 
+        
+        if (confirm("Do you want the password to lower case letters?")===true) {
+            userChars.push(lowerCase);
+        }
+
+        if (confirm("Do you want the password to upper case letters?")===true) {
+            userChars.push(upperCase);
+        }
+
+        if (confirm("Do you want the password to special characters?")===true) {
+            userChars.push(specialChar);
+        }
+
+        var allChars= userChars.flat();
+
+        
 
         console.log(allChars);
 
-
-            //prompt user to pick number of chars for the password between 8-128
-        var passwordLength = prompt("How long do you want your password to be? (Enter a number between 8 and 128)")
+        
+        
+        
+    
     </script>
 </body>
 </html> 
