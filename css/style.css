@@ -1,6 +1,32 @@
 h1 {
     text-align: center;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #5e5e5e;
+}
 
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #5e5e5e;
+}
+
+.container {
+    width: 100%;
+}
+
+#outerbox {
+    border-style: dotted;
+    border-color: rgb(221, 221, 221);
+    border-width: 2px;
+    padding: 30px;
+
+}
+
+.col-11 {
+    margin: 20px auto;
+    display: block;
 }
 
 #box {
@@ -10,6 +36,13 @@ h1 {
     border-width: 2px;
     border-color: rgb(178, 183, 189);
     border-radius: 3%;
+    margin: 20px auto;
+    display: block;
+}
+
+#boxText {
+    color: #929292;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .btn {
