@@ -71,7 +71,11 @@
         let randomIndexNum = Math.floor(Math.random() * allChars.length);
             let randomChar = allChars[randomIndexNum];
 
-
+            for (let i = 0; i < passwordLength; i++) {
+                let randomIndexNum = Math.floor(Math.random() * allChars.length);
+                let randomChar = allChars[randomIndexNum];
+                randomPassword[i] = randomChar;
+                 }
 
         console.log(randomPassword);
 
