@@ -24,7 +24,7 @@
             
                 <div class="row">
                     <div class="col-3">
-                        <button type="button" class="btn btn1 btn-danger rounded-pill">Generate Password</button>
+                        <button id="generate" onclick="genPassword()" type="button" class="btn btn1 btn-danger rounded-pill">Generate Password</button>
                     </div>
 
                     <div class="col-3">
@@ -69,19 +69,22 @@
         let randomIndexNum = Math.floor(Math.random() * allChars.length);
             let randomChar = allChars[randomIndexNum];
 
+        function genPassword() {
             for (let i = 0; i < passwordLength; i++) {
                 let randomIndexNum = Math.floor(Math.random() * allChars.length);
                 let randomChar = allChars[randomIndexNum];
                 randomPassword[i] = randomChar;
-                 }
+                 };
             finalPassword=randomPassword.join("");
-
         
         var displayPassword = document.createElement("p");
         displayPassword.textContent = finalPassword;
-        displayPassword.setAttribute("style", "text-align:center;");
+        displayPassword.setAttribute("style", "text-align:center; color:black;");
         var passwordBox = document.querySelector("#box");
         passwordBox.appendChild(displayPassword);
+        };
+        // document.getElementById("generate").onclick = genPassword();
+        // document.getElementById("generate").onclick = displayPassword.setAttribute("style", "color:black;");
     
     </script>
 </body>
