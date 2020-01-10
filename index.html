@@ -86,9 +86,7 @@
             };
 
         function copyPassword() {
-            var copyOfPass = finalPassword;
-            copyOfPass.select();
-            document.execCommand("copy");
+            var promise = navigator.clipboard.writeText(finalPassword);
         };
 
     </script>
