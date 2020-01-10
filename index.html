@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="col-3">
-                        <button type="button" class="btn btn2 btn-secondary">Copy to Clipboard</button>
+                        <button id="copyToClipboard" onclick="copyPassword()"  type="button" class="btn btn2 btn-secondary">Copy to Clipboard</button>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
         var allChars= userChars.flat();
 
         let randomIndexNum = Math.floor(Math.random() * allChars.length);
-            let randomChar = allChars[randomIndexNum];
+        let randomChar = allChars[randomIndexNum];
 
         function genPassword() {
             for (let i = 0; i < passwordLength; i++) {
@@ -77,15 +77,20 @@
                  };
             finalPassword=randomPassword.join("");
         
-        var displayPassword = document.createElement("p");
-        displayPassword.textContent = finalPassword;
-        displayPassword.setAttribute("style", "text-align:center; color:black;");
-        var passwordBox = document.querySelector("#box");
-        passwordBox.appendChild(displayPassword);
+            var displayPassword = document.createElement("p");
+            displayPassword.textContent = finalPassword;
+            displayPassword.setAttribute("style", "text-align:center; color:black;",);
+            displayPassword.setAttribute("id","displaypassword");
+            var passwordBox = document.querySelector("#box");
+            passwordBox.appendChild(displayPassword);
+            };
+
+        function copyPassword() {
+            var copyOfPass = finalPassword;
+            copyOfPass.select();
+            document.execCommand("copy");
         };
-        // document.getElementById("generate").onclick = genPassword();
-        // document.getElementById("generate").onclick = displayPassword.setAttribute("style", "color:black;");
-    
+
     </script>
 </body>
 </html> 
